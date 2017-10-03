@@ -8,7 +8,7 @@ bool stop=0;
 bool lite=1;
 bool food=0;
 bool boostspeed=1;
-int speed=2; //1-slow, 2-normal, 3-fast
+int speed=3; //1-slow, 2-normal, 3-fast
 int framecount=0;
 int food_x,food_y;
 const int m=10,n=20;
@@ -77,8 +77,6 @@ void Snake::MoveSnake(){
         food=0;
         ++snake.size;
         AddPart();
-        if(boostspeed)
-            ++snake.speed;
     }
     else if(body){
         AddPart();
